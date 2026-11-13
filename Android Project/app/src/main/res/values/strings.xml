@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Expense Tracker</string>
+    <string name="expense_tracker">EXPENSE TRACKER</string>
+    <string name="greeting_user">Welcome back 👋</string>
+    <string name="subtitle_expense_tracker">Track your daily expenses &amp; income</string>
+    <string name="splash_tagline">Smart Financial Management</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="default_amount">₹0.00</string>
+    <string name="total_income">Total Income</string>
+    <string name="total_expenses">Total Expenses</string>
+    <string name="label_income_substat">▲ Income</string>
+    <string name="label_expense_substat">▼ Expenses</string>
+    <string name="add_income">+ Add Income</string>
+    <string name="add_expense">- Add Expense</string>
+    <string name="recent_transactions">Recent Activity</string>
+    <string name="no_transactions_yet">No transactions recorded yet</string>
+    <string name="save_income">Save Income</string>
+    <string name="save_expense">Save Expense</string>
+    <string name="title_add_income">Add Income</string>
+    <string name="title_add_expense">Add Expense</string>
+
+    <string name="subtitle_add_income">Record new income transaction</string>
+    <string name="subtitle_add_expense">Record new expense transaction</string>
+    <string name="label_amount">Amount (₹)</string>
+    <string name="label_income_source">Income Source</string>
+    <string name="label_category">Category</string>
+    <string name="label_description">Description</string>
+    <string name="label_note">Note (Optional)</string>
+
+    <string name="hint_enter_amount">0.00</string>
+    <string name="hint_income_source">e.g. Salary, Freelance, Investment</string>
+    <string name="hint_expense_description">e.g. Dinner, Grocery, Bus Ticket</string>
+    <string name="hint_note_optional">Add additional details&#8230;</string>
+
+    <string name="title_settings">Settings</string>
+    <string name="subtitle_settings">App preferences &amp; options</string>
+    <string name="title_dark_mode">Dark Mode</string>
+    <string name="desc_dark_mode">Enable dark theme for the app</string>
+    <string name="title_clear_data">Clear All Data</string>
+    <string name="desc_clear_data">Delete all income and expense transactions</string>
+    <string name="btn_clear_data">Clear Data</string>
+    <string name="dialog_clear_title">Clear All Transactions?</string>
+    <string name="dialog_clear_message">This action cannot be undone. Are you sure you want to delete all transactions?</string>
+    <string name="app_version">Expense Tracker v1.0</string>
+
+    <string name="title_analytics">Analytics &amp; Reports</string>
+    <string name="subtitle_analytics">Yearly and monthly financial insights</string>
+    <string name="label_view_reports">View Reports →</string>
+    <string name="yearly_summary">Yearly Summary</string>
+    <string name="yearly_income">Yearly Income</string>
+    <string name="yearly_expenses">Yearly Expenses</string>
+    <string name="yearly_net">Yearly Net Balance</string>
+    <string name="monthly_breakdown">Monthly Breakdown</string>
+    <string name="no_data_year">No transactions recorded for this year</string>
+    <string name="desc_prev_year">Previous Year</string>
+    <string name="desc_next_year">Next Year</string>
+    <string name="hint_show_pie">Tap to view pie chart ▾</string>
+    <string name="hint_hide_pie">Tap to hide pie chart ▴</string>
+
+    <string name="dialog_delete_title">Delete Transaction?</string>
+    <string name="dialog_delete_message">Are you sure you want to delete this transaction?</string>
+    <string name="btn_delete">Delete</string>
+    <string name="toast_transaction_deleted">Transaction deleted</string>
+    <string name="desc_delete_transaction">Delete Transaction</string>
+
+    <string name="desc_menu_button">Open Menu</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_analytics">Analytics &amp; Reports</string>
+    <string name="menu_calculator">Calculator &amp; EMI</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="title_calculator">Calculator &amp; EMI</string>
+    <string name="subtitle_calculator">Quick calculations &amp; monthly EMI planner</string>
+    <string name="tab_standard_calc">Calculator</string>
+    <string name="tab_emi_calc">Monthly EMI</string>
+    <string name="label_loan_amount">Loan Amount (₹)</string>
+    <string name="label_interest_rate">Interest Rate (% p.a.)</string>
+    <string name="label_tenure_years">Tenure (Years)</string>
+    <string name="btn_calculate_emi">Calculate Monthly EMI</string>
+    <string name="label_monthly_emi">Monthly EMI</string>
+    <string name="label_total_interest">Total Interest</string>
+    <string name="label_total_payment">Total Payment</string>
+</resources>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_calculator"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/subtitle_calculator"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary" />
+
+        <!-- Mode Selection Tabs -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnTabStandard"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="@color/accent_primary"
+                android:text="@string/tab_standard_calc"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnTabEmi"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="@color/bg_card"
+                android:text="@string/tab_emi_calc"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Container 1: Standard Calculator -->
+
+        <LinearLayout
+            android:id="@+id/layoutStandardCalc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!-- Display Screen -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_stat_card"
+                android:elevation="2dp"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvCalcExpression"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_secondary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvCalcResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="0"
+                    android:textColor="@color/text_primary"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Calculator Keypad Grid -->
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="4"
+                android:rowCount="5">
+
+                <!-- Row 1 -->
+                <Button android:id="@+id/btnCalcClear" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/expense_red" android:text="C" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalcDelete" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="⌫" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalcPercent" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="%" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalcDivide" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/accent_primary" android:text="÷" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" />
+
+                <!-- Row 2 -->
+                <Button android:id="@+id/btnCalc7" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="7" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalc8" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="8" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalc9" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="9" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalcMultiply" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/accent_primary" android:text="×" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" />
+
+                <!-- Row 3 -->
+                <Button android:id="@+id/btnCalc4" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="4" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalc5" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="5" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalc6" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="6" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalcMinus" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/accent_primary" android:text="-" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" />
+
+                <!-- Row 4 -->
+                <Button android:id="@+id/btnCalc1" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="1" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalc2" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="2" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalc3" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="3" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalcPlus" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/accent_primary" android:text="+" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" />
+
+                <!-- Row 5 -->
+                <Button android:id="@+id/btnCalcDoubleZero" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="00" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalc0" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="0" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalcDot" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/bg_card" android:text="." android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                <Button android:id="@+id/btnCalcEquals" android:layout_width="0dp" android:layout_height="56dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:backgroundTint="@color/income_green" android:text="=" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+        <!-- Container 2: EMI Calculator -->
+
+        <LinearLayout
+            android:id="@+id/layoutEmiCalc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- EMI Inputs -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_loan_amount"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEmiPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="@string/hint_enter_amount"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_muted"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_interest_rate"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEmiRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="@string/hint_enter_amount"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_muted"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_tenure_years"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEmiTenure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="@string/hint_enter_amount"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_muted"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCalculateEmi"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/accent_primary"
+                android:text="@string/btn_calculate_emi"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- EMI Result Card -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_hero_card"
+                android:elevation="6dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_monthly_emi"
+                    android:textColor="#C7D2FE"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvEmiMonthly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/default_amount"
+                    android:textColor="#FFFFFF"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#25FFFFFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_total_interest"
+                            android:textColor="#C7D2FE"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvEmiTotalInterest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/default_amount"
+                            android:textColor="#FECDD3"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_total_payment"
+                            android:textColor="#C7D2FE"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvEmiTotalPayment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/default_amount"
+                            android:textColor="#A7F3D0"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

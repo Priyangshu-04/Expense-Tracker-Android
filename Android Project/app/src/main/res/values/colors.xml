@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Warm Aesthetic Light Theme Palette -->
+    <color name="bg_main">#F6EFE9</color>
+    <color name="bg_card">#FFFBF7</color>
+    <color name="card_border">#EADED4</color>
+    <color name="text_primary">#1E2432</color>
+    <color name="text_secondary">#757D8A</color>
+    <color name="text_muted">#A0A8B5</color>
+
+    <color name="income_green">#0D9488</color>
+    <color name="expense_red">#E11D48</color>
+
+    <color name="accent_primary">#4F46E5</color>
+
+    <!-- Category Pill Badges (Light) -->
+    <color name="badge_orange_bg">#FFEDD5</color>
+    <color name="badge_orange_text">#C2410C</color>
+
+    <color name="badge_teal_bg">#CCFBF1</color>
+    <color name="badge_teal_text">#0F766E</color>
+
+    <color name="badge_blue_bg">#E0F2FE</color>
+    <color name="badge_blue_text">#0369A1</color>
+</resources>
