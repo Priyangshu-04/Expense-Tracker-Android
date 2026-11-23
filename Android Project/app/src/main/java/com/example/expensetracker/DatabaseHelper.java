@@ -46,6 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    /** Adds a transaction to the database. */
     public boolean addTransaction(Transaction transaction) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -60,6 +61,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
+    /** Deletes a transaction by ID. */
     public boolean deleteTransaction(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         int rows = db.delete(TABLE_TRANSACTIONS, COLUMN_ID + " = ?", new String[]{String.valueOf(id)});
@@ -67,6 +69,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return rows > 0;
     }
 
+    /** Gets all transactions ordered by timestamp descending. */
     public List<Transaction> getAllTransactions() {
         List<Transaction> transactionList = new ArrayList<>();
         String selectQuery = "SELECT * FROM " + TABLE_TRANSACTIONS + " ORDER BY " + COLUMN_TIMESTAMP + " DESC";
@@ -93,6 +96,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return transactionList;
     }
 
+    /** Gets total income amount. */
     public double getTotalIncome() {
         String query = "SELECT SUM(" + COLUMN_AMOUNT + ") FROM " + TABLE_TRANSACTIONS
                 + " WHERE " + COLUMN_TYPE + " = ?";
@@ -107,6 +111,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return total;
     }
 
+    /** Gets total expense amount. */
     public double getTotalExpense() {
         String query = "SELECT SUM(" + COLUMN_AMOUNT + ") FROM " + TABLE_TRANSACTIONS
                 + " WHERE " + COLUMN_TYPE + " = ?";
@@ -121,6 +126,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return total;
     }
 
+    /** Clears all transactions from the table. */
     public void clearAllTransactions() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_TRANSACTIONS, null, null);
