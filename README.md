@@ -134,6 +134,20 @@ The persistence layer defines the `transactions` table structured as follows:
 
 ---
 
+## Security & Data Privacy
+- Offline-first SQLite storage (`expense_tracker.db`) ensuring zero external telemetry.
+- Parameterized SQL queries (`?` bindings) in `DatabaseHelper` to prevent local SQL injection.
+- Android internal storage sandboxing to protect raw transaction records.
+
+---
+
+## Testing & Validation
+- Input validation for empty titles, negative values, and decimal formatting across transaction forms.
+- Boundary value testing in `CalculatorActivity` for 0% interest rates and multi-year EMI scaling.
+- State and theme persistence verification across device rotations via `ThemeManager`.
+
+---
+
 ## Future Enhancements
 - Biometric verification (AndroidX Biometric API) for restricted transaction viewing.
 - Tabular data export to CSV / PDF for personal accounting records.
@@ -144,3 +158,4 @@ The persistence layer defines the `transactions` table structured as follows:
 
 ## Author
 - **Priyangshu-04** - [GitHub Profile](https://github.com/Priyangshu-04)
+- **shawonmridha-sm** - [GitHub Profile](https://github.com/shawonmridha-sm)
